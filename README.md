@@ -4,22 +4,11 @@ API da atividade prática de Desenvolvimento Web Back-End.
 
 Fernando Santos Reis - RU 4648180
 
-## Execução
+## Tecnologias
 
-Requisito: JDK 17 ou superior. O projeto inclui Maven Wrapper, que baixa o Maven na primeira execução; é preciso acesso à internet.
-
-Na pasta do projeto:
-
-```text
-.\mvnw.cmd clean test
-.\mvnw.cmd spring-boot:run
-```
-
-No Linux ou macOS, use `./mvnw` no lugar de `.\mvnw.cmd`.
-Se o Maven já estiver instalado, também é possível executar `mvn clean test` e `mvn spring-boot:run`.
-
-A API atende em http://localhost:8080. O H2 grava os dados na pasta `data/`.
-Não é necessário instalar MySQL. O banco começa vazio.
+Java 17, Spring Boot 3.5.7, Spring Data JPA, Maven e banco relacional H2.
+A API atende em http://localhost:8080. O H2 grava os dados no arquivo
+`./data/baozi`. O projeto inclui Maven Wrapper.
 
 ## Organização
 
@@ -43,11 +32,8 @@ vinculado a pedido não pode ser excluído (409). Produto sem estoque também re
 
 ## Postman
 
-Importe `postman/Baozi-Store.postman_collection.json`. Execute as requisições em ordem.
-Os IDs criados ficam nas variáveis da coleção, por isso não precisam começar em 1.
-Capture os três POSTs, as três listagens, as três buscas por ID e os três DELETEs.
-Cada captura deve mostrar método, URL, corpo enviado quando houver, status e resposta.
-Faça os DELETEs por último, começando pelo pedido.
+A coleção `postman/Baozi-Store.postman_collection.json` contém as requisições
+das três entidades. Os IDs gerados ficam nas variáveis da coleção.
 
 Os dados usados no estudo de caso são Fernando Santos Reis4648180, Baozi de porco,
 R$ 8,50 e três unidades. O pedido corresponde a R$ 25,50; total não é um campo da API.
@@ -61,13 +47,7 @@ e proteção dos vínculos entre pedidos, clientes e produtos.
 A coleção também foi executada contra a API em funcionamento pelo Postman CLI:
 12 requisições e 15 verificações passaram, sem falhas.
 
-```text
-postman collection run postman/Baozi-Store.postman_collection.json
-```
-
-O resultado do CLI não dispensa as capturas da interface exigidas pelo enunciado.
-
-## Publicação do código
+## Repositório
 
 Repositório: https://github.com/Fernando-SRS/baozi-store-backend-2026
 
