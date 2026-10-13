@@ -52,7 +52,23 @@ Faça os DELETEs por último, começando pelo pedido.
 Os dados usados no estudo de caso são Fernando Santos Reis4648180, Baozi de porco,
 R$ 8,50 e três unidades. O pedido corresponde a R$ 25,50; total não é um campo da API.
 
+## Validação
+
+O projeto foi compilado e os três testes de integração passaram. Esses testes verificam
+o fluxo das três entidades, IDs inexistentes, dados inválidos, produto indisponível
+e proteção dos vínculos entre pedidos, clientes e produtos.
+
+A coleção também foi executada contra a API em funcionamento pelo Postman CLI:
+12 requisições e 15 verificações passaram, sem falhas.
+
+```text
+postman collection run postman/Baozi-Store.postman_collection.json
+```
+
+O resultado do CLI não dispensa as capturas da interface exigidas pelo enunciado.
+
 ## Publicação do código
 
-Crie um repositório na sua conta e publique esta pasta, sem `target/` e `data/`.
-Copie o link real do repositório para a seção correspondente do documento.
+Repositório: https://github.com/Fernando-SRS/baozi-store-backend-2026
+
+Os arquivos de `target/` e `data/` ficam fora do controle de versão.
